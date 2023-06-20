@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "e56b97e2-b8e4-4130-b9ec-efafe0a3cfe0",
+		"name": "Movies Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27255333"
+	},
+	"item": [
+		{
+			"name": "Genres",
+			"item": [
+				{
+					"name": "Get all genres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44373/api/genres",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"genres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add genre",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44373/api/genres",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"genres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update genre",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"test3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44373/api/genres/17",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"genres",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete genre",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44373/api/genres/15",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"genres",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get all movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44373/api/Movies/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"Movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Year",
+									"value": "2002",
+									"type": "text"
+								},
+								{
+									"key": "Rate",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "StoreLine",
+									"value": "فيلم عسكر في المعسكر",
+									"type": "text"
+								},
+								{
+									"key": "GenreId",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "Title",
+									"value": "عسكر في المعسكر",
+									"type": "text"
+								},
+								{
+									"key": "Poster",
+									"type": "file",
+									"src": "/C:/Users/abdal/Desktop/Codeforces/1.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44373/api/Movies/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"Movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get movie by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44373/api/Movies/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"Movies",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "StoreLine",
+									"value": "عندما ينضمّ رجل إلى القوّات المسلّحة، يعلم أنّ هناك جنديًّا زميلًا يسعى لأخذ الثأر منه. وللهرب ممّن يلاحقه، يُقدِم على الزواج كخدعة.",
+									"type": "text"
+								},
+								{
+									"key": "Title",
+									"value": "عسكر في المعسكر",
+									"type": "text"
+								},
+								{
+									"key": "GenreId",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "Rate",
+									"value": "9.5",
+									"type": "text"
+								},
+								{
+									"key": "Year",
+									"value": "2003",
+									"type": "text"
+								},
+								{
+									"key": "Poster",
+									"type": "file",
+									"src": "/C:/Users/abdal/Desktop/poster.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44373/api/Movies/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"Movies",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44373/api/Movies/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"Movies",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by genre id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44373/api/Movies/GetByGenreId/?genreId=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44373",
+							"path": [
+								"api",
+								"Movies",
+								"GetByGenreId",
+								""
+							],
+							"query": [
+								{
+									"key": "genreId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
